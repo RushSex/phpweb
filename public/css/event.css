@@ -1,0 +1,124 @@
+/* Стили для ссылок */
+.header__link,
+.burger-menu__link,
+.contacts__link {
+    position: relative;
+    display: inline-block;
+}
+
+.header__link::before,
+.header__link::after,
+.burger-menu__link::before,
+.burger-menu__link::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    background-color: var(--hover-color);
+    width: 11.25px;
+    vertical-align: middle;
+    border-radius: 10em;
+    margin: 0 7.25px;
+    visibility: hidden;
+}
+
+.header__link:hover,
+.burger-menu__link:hover,
+.contacts__link:hover,
+.header__link:focus,
+.burger-menu__link:focus,
+.contacts__link:focus {
+    color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.header__link--active::before,
+.header__link--active::after,
+.burger-menu__link--active::before,
+.burger-menu__link--active::after,
+.header__link:hover::before,
+.header__link:hover::after,
+.burger-menu__link:hover::before,
+.burger-menu__link:hover::after,
+.contacts__link:hover::before,
+.contacts__link:hover::after {
+    visibility: visible;
+}
+
+.header__link:active,
+.burger-menu__link:active,
+.contacts__link:active {
+    color: var(--active-color);
+    transform: scale(1.0);
+}
+
+
+/* Стили для кнопок */
+.button:hover,
+.button:focus,
+.button:active {
+    color: var(--hover-color);
+    border-top: 2px solid var(--hover-color);
+    border-bottom: 2px solid var(--hover-color);
+    letter-spacing: 15px;
+}
+
+.button:focus {
+    border-top: 2px solid var(--focus-color);
+    border-bottom: 2px solid var(--focus-color);
+}
+
+.button:active {
+    border-top: 2px solid var(--active-color);
+    border-bottom: 2px solid var(--active-color);
+}
+
+/* Стили для иконок социальных сетей */
+.social-links__item:hover {
+    transform: scale(1.2);
+}
+
+.social-links__item:focus {
+    .social-links__item--icon g {
+        fill: var(--focus-color);
+    }
+}
+
+.social-links__item:active {
+    transform: scale(0.8);
+
+    .social-links__item--icon g {
+        fill: var(--active-color);
+    }
+}
+
+/* Стрелки */
+.arrow-button:hover {
+    border-bottom-color: var(--hover-color);
+}
+
+.arrow-button:active {
+    border-bottom-color: var(--active-color);
+    transform: scale(1.1);
+}
+
+.arrow-down-button {
+    border-top: 30px solid var(--text-color);
+}
+
+.arrow-down-button:hover {
+    border-top-color: var(--hover-color);
+}
+
+.arrow-down-button:active {
+    border-top-color: var(--active-color);
+    transform: scale(1.1);
+}
+
+/* Страница пагинации */
+.pagination-item:hover {
+    border-color: var(--hover-color);
+}
+
+.pagination-item.active {
+    border-color: var(--active-color);
+}

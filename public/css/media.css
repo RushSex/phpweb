@@ -1,0 +1,33 @@
+@media (max-width: 740px) {
+    .burger-menu {
+        display: block !important;
+        position: relative;
+    }
+
+    ul.header__list {
+        display: none !important;
+    }
+
+    .center-block {
+        padding-top: 10vh; 
+    }
+
+    .center-block__title {
+        font-size: 2rem;     
+    }
+
+    .socials__link {
+        height: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .center-block__title {
+        font-size: 1.5rem;   
+    }
+
+    .socials__list {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+}

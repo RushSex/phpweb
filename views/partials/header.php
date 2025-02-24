@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $title ?? 'PHP WEB DEVELOPER' ?></title>
-  <link rel="stylesheet" href="/public/style/main.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/ajax/ajax.js"></script>
+
   </head>
 <body class="light-mode">
   <div class="wraaper">
@@ -15,7 +18,7 @@
           <label class="burger-menu__icon" for="menu-toggle"></label>
           <nav class="burger-menu__content">
             <ul class="burger-menu__list">
-              <li class="burger-menu__item"><a href="/" class="burger-menu__link <?= ($currentPath ?? 'home') === 'home' ? 'burger-menu__link--active' : '' ?>">Главная</a></li>
+              <li class="burger-menu__item"><a href="/" class="burger-menu__link" <?= ($currentPath ?? 'home') === 'home' ? 'burger-menu__link--active' : '' ?>>Главная</a></li>
               <li class="burger-menu__item"><a href="/services" class="burger-menu__link <?= ($currentPath ?? 'services') === 'services' ? 'header__link--active' : '' ?>">Услуги</a></li>
               <li class="burger-menu__item"><a href="/reviews" class="burger-menu__link <?= ($currentPath ?? 'reviews') === 'reviews' ? 'header__link--active' : '' ?>">Отзывы</a></li>
               <li class="burger-menu__item"><a href="/contacts" class="burger-menu__link <?= ($currentPath ?? 'contacts') === 'contacts' ? 'header__link--active' : '' ?>">Контакты</a></li>

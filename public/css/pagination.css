@@ -1,0 +1,114 @@
+
+.pagination {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-width: 400px;
+  touch-action: pan-x;
+  cursor: grab;
+}
+
+.pagination::-webkit-scrollbar {
+  display: none;
+}
+
+.pagination-item {
+  color: var(--text-color);
+  padding: 5px 20px;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pagination-hidden {
+  color: transparent;
+  padding: 0 69px;
+}
+
+.pagination-item:hover {
+  border-left: 3px solid var(--hover-color);
+  border-right: 3px solid var(--hover-color);
+}
+
+.pagination-item.active {
+  border-left: 3px solid var(--active-color);
+  border-right: 3px solid var(--active-color);
+}
+
+.arrow-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.arrow-button {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid var(--text-color);
+  cursor: pointer;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  border-bottom-color: var(--hover-color);
+}
+
+.arrow-button:active {
+  border-bottom-color: var(--active-color);
+  transform: scale(1.10);
+}
+
+.arrow-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.arrow-down-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.arrow-down-text {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.arrow-down-button {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid var(--text-color);
+  cursor: pointer;
+  transition: border-top-color 0.3s ease;
+}
+
+.arrow-down-button:hover {
+  border-top-color: var(--hover-color);
+}
+
+.arrow-down-button:active {
+  border-top-color: var(--active-color);
+  transform: scale(1.10);
+}

@@ -1,0 +1,41 @@
+:root {
+    --dark: #111111;
+    --sun: #ffd700;
+    --sun-shadow: #987416;
+    --moon: #dddddd;
+    --moon-shadow: #808080;
+    --star: #ffffff;
+    --cloud: #ffffff;
+    --crater: #505064;
+    --shadow-01: #80808077;
+    --shadow-02: #ffffff22;
+    --shadow-03: #555555;
+    --white: #ffffff;
+    --background-day: linear-gradient(skyblue, cadetblue);
+    --background-night: linear-gradient(-45deg, #222, #000030);
+  }
+  
+  .light-mode {
+    --background-color: #dadada;
+    --text-color: #333;
+    --hover-color: #ad2424;
+    --focus-color: #ff3939;
+    --active-color: #850000;
+    --icon-color: #333;
+    --border-color: #121212;
+    --boxshadow-color: 0 2px 4px rgba(18, 18, 18, 0.1);
+    --background-image-path: url(../images/white-them.jpg);
+  }
+  
+  .dark-mode {
+    --background-color: #121212;
+    --text-color: rgb(218, 218, 218);
+    --hover-color: #6200ff;
+    --focus-color: #8031ff;
+    --active-color: #320083;
+    --icon-color: #dadada;
+    --border-color: #333;
+    --boxshadow-color: 0 2px 4px rgba(218, 218, 218, 0.1);
+    --background-image-path: url(../images/dark-them.jpg);
+  }
+  

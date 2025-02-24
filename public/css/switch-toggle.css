@@ -1,0 +1,100 @@
+.switch-toggle {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 12px;
+  transform: scale(3);
+  right: 30px;
+}
+
+.switch-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--background-day);
+  border-radius: 34px;
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), 0 0 3px var(--dark);
+  z-index: 1;
+}
+
+.switch-toggle__slider::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 1px;
+  bottom: 1px;
+  background-color: var(--sun);
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 
+    inset 0 0 1px var(--sun-shadow),
+    -1px -1px 2px 1px var(--shadow-01),
+    0 0 0 3px var(--shadow-02),
+    0 0 0 6px var(--shadow-02),
+    1px 1px 0 8px var(--shadow-02);
+}
+
+input:checked + .switch-toggle__slider {
+  background: var(--background-night);
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.3), 0 0 3px var(--white);
+}
+
+input:checked + .switch-toggle__slider::before {
+  background: var(--moon);
+  transform: translateX(120%);
+  box-shadow: 
+    inset 0 0 1px var(--moon-shadow),
+    0 0 1px var(--shadow-03),
+    0 0 0 3px var(--shadow-02),
+    0 0 0 6px var(--shadow-02),
+    -1px 0 0 8px var(--shadow-02);
+}
+
+.switch-toggle__slider::after {
+  content: "";
+  position: absolute;
+  background: var(--crater);
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  bottom: 60%;
+  right: 18%;
+  box-shadow: 
+    -3px 2px 0 1px var(--crater),
+    1px 3px 0 var(--crater);
+  transition: 0.4s;
+  transform: scale(0) rotate(260deg);
+  filter: saturate(0.75);
+}
+
+input:checked + .switch-toggle__slider::after {
+  transform: scale(1) rotate(-24deg);
+}
+
+.switch-toggle__slider--background {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--cloud);
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  box-shadow:
+    -4px 0 0 1px var(--cloud),
+    -7px 1px 0 1px var(--cloud),
+    -1px 1px 0 2px var(--cloud);
+  transition: 0.4s;
+}
+
+input:checked + .switch-toggle__slider .switch-toggle__slider--background {
+  transform: translateY(260%);
+}

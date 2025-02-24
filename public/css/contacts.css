@@ -1,0 +1,50 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+}
+
+.contacts__container {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-start;
+    margin-left: 13px;
+}
+
+.contacts__item {
+    list-style: none;
+}
+
+.contacts__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.contacts__info {
+    display: grid;
+    gap: 15px;
+}
+
+.contacts__link {
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+

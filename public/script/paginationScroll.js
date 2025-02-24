@@ -1,46 +1,48 @@
- const pagination = document.getElementById('pagination');
+document.addEventListener('DOMContentLoaded', () => {
+  const pagination = document.getElementById('pagination');
 
- let isDragging = false;
- let startX, scrollLeft;
+  if (!pagination) return; // Проверяем, существует ли элемент
 
- pagination.addEventListener('mousedown', (e) => {
-   isDragging = true;
-   startX = e.pageX - pagination.offsetLeft;
-   scrollLeft = pagination.scrollLeft;
-   pagination.style.cursor = 'grabbing';
- });
+  let isDragging = false;
+  let startX, scrollLeft;
 
- pagination.addEventListener('mouseleave', () => {
-   isDragging = false;
-   pagination.style.cursor = 'grab';
- });
+  pagination.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - pagination.offsetLeft;
+    scrollLeft = pagination.scrollLeft;
+    pagination.style.cursor = 'grabbing';
+  });
 
- pagination.addEventListener('mouseup', () => {
-   isDragging = false;
-   pagination.style.cursor = 'grab';
- });
+  document.addEventListener('mouseup', () => { 
+    isDragging = false;
+    pagination.style.cursor = 'grab';
+  });
 
- pagination.addEventListener('mousemove', (e) => {
-   if (!isDragging) return;
-   e.preventDefault();
-   const x = e.pageX - pagination.offsetLeft;
-   const walk = (x - startX) * 2; 
-   pagination.scrollLeft = scrollLeft - walk;
- });
+  document.addEventListener('mouseleave', () => { 
+    isDragging = false;
+  });
 
- pagination.addEventListener('selectstart', (e) => {
-   e.preventDefault();
- });
+  pagination.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - pagination.offsetLeft;
+    const walk = (x - startX) * 2; 
+    pagination.scrollLeft = scrollLeft - walk;
+  });
 
- document.addEventListener('DOMContentLoaded', () => {
-   setTimeout(() => {
-     const activeItem = document.getElementById('active-item');
-     if (activeItem) {
-       activeItem.scrollIntoView({
-         behavior: 'smooth',
-         block: 'nearest',
-         inline: 'center'
-       });
-     }
-   }, 100); 
- });
+  pagination.addEventListener('selectstart', (e) => {
+    e.preventDefault();
+  });
+
+  // Прокрутка к активному элементу после загрузки страницы
+  setTimeout(() => {
+    const activeItem = document.getElementById('active-item');
+    if (activeItem) {
+      activeItem.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
+    }
+  }, 100);
+});
