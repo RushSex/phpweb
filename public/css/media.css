@@ -37,14 +37,5 @@
     .socials__list {
         grid-template-columns: 1fr; 
         gap: 10px;
-    }
-
-    .pagination-item {
-        font-size: 16px;
-      }
-      
-      .pagination-hidden {
-        padding: 0 200px;
-      }
-      
+    }    
 }
