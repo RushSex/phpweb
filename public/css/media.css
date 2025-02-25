@@ -19,6 +19,14 @@
     .socials__link {
         height: 30px; 
     }
+
+    .pagination-item {
+        font-size: 14px;
+    }
+      
+    .pagination-hidden {
+        padding: 0 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -30,4 +38,13 @@
         grid-template-columns: 1fr; 
         gap: 10px;
     }
+
+    .pagination-item {
+        font-size: 16px;
+      }
+      
+      .pagination-hidden {
+        padding: 0 200px;
+      }
+      
 }

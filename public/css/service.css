@@ -93,7 +93,7 @@
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
   min-width: 100px; 
   text-align: center;
@@ -102,7 +102,7 @@
 
 .pagination-hidden {
   color: transparent;
-  padding: 0 50px;
+  padding: 0 200px;
 }
 
 .arrow-button, .arrow-down-button {
